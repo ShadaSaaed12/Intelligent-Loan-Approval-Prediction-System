@@ -13,9 +13,8 @@ The project workflow includes:
 - Model Evaluation
 
 The final optimized Support Vector Machine (SVM) model achieved:
-
-- ✅ Accuracy: **91.67%**
-- ✅ ROC-AUC Score: **0.9679**
+- Accuracy: 91.67%
+- ROC-AUC Score: 0.9679
 
 ---
 
@@ -25,21 +24,15 @@ The final optimized Support Vector Machine (SVM) model achieved:
 |---|---|
 | Dataset Size | 20,000 Records |
 | Total Features | 35 Features |
-| Target Variable | `LoanApproved` |
+| Target Variable | LoanApproved |
 
 ## Target Labels
-
-| Label | Meaning |
-|---|---|
-| 1 | Approved |
-| 0 | Rejected |
+- 1 → Approved
+- 0 → Rejected
 
 ---
 
-# Main Features
-
-Some of the important features used in the project:
-
+# Main Features Used
 - Age
 - AnnualIncome
 - CreditScore
@@ -56,15 +49,13 @@ Some of the important features used in the project:
 
 # Data Cleaning
 
-To prevent **Data Leakage**, the following columns were removed:
-
-- `RiskScore`
-- `InterestRate`
-- `BaseInterestRate`
-- `MonthlyLoanPayment`
+To prevent Data Leakage, the following columns were removed:
+- RiskScore
+- InterestRate
+- BaseInterestRate
+- MonthlyLoanPayment
 
 ## Additional Preprocessing Steps
-
 - Missing Value Checking
 - Outlier Detection using IQR
 - Outlier Handling using Capping
@@ -74,7 +65,6 @@ To prevent **Data Leakage**, the following columns were removed:
 # Exploratory Data Analysis (EDA)
 
 EDA was performed to analyze:
-
 - Loan approval distribution
 - Credit score behavior
 - Income distribution
@@ -82,65 +72,48 @@ EDA was performed to analyze:
 - Bankruptcy history effect
 
 ## Key Insights
-
-- Higher credit scores increased loan approval probability.
-- Higher annual income was associated with approved loans.
-- Bankruptcy history negatively affected loan approval decisions.
+- Higher credit scores increase loan approval probability
+- Higher annual income is associated with approved loans
+- Bankruptcy history negatively affects loan approval decisions
 
 ---
 
 # Preprocessing
 
 ## Encoding
-
-Categorical variables were encoded using:
-
-- `OrdinalEncoder`
+- OrdinalEncoder
 
 ## Feature Scaling
-
-Numerical features were standardized using:
-
-- `StandardScaler`
+- StandardScaler
 
 ## Pipeline Components
-
-- `ColumnTransformer`
-- `Pipeline`
+- ColumnTransformer
+- Pipeline
 
 ---
 
 # Dimensionality Reduction
 
-Two feature selection techniques were compared:
+Comparison between PCA and SelectKBest:
 
-| Technique | Accuracy |
-|---|---|
-| PCA | 90.45% |
-| SelectKBest | 91.39% |
+- PCA → 90.45% accuracy
+- SelectKBest → 91.39% accuracy
 
-## Best Technique
-
-✅ `SelectKBest`
+Best Method:
+- SelectKBest
 
 ---
 
 # Machine Learning Model
 
 ## Model Used
-
 - Support Vector Machine (SVM)
 
 ## Hyperparameter Tuning
-
-Performed using:
-
-- `GridSearchCV`
-- `StratifiedKFold`
+- GridSearchCV
+- StratifiedKFold
 
 ## Best Parameters
-
-```python
 {
     'svm__C': 1,
     'svm__gamma': 'scale',
@@ -149,48 +122,32 @@ Performed using:
 
 ---
 
-## Technologies Used
-
-- Python  
-
-- Pandas  
-
-- NumPy  
-
-- Matplotlib  
-
-- Seaborn  
-
-- Scikit-learn  
+# Technologies Used
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
 
 ---
 
-## Final Results
+# Final Results
 
-| Metric   | Score   |
-
-|----------|---------|
-
-| Accuracy | 91.67%  |
-
-| ROC-AUC  | 0.9679  |
+- Accuracy: 91.67%
+- ROC-AUC: 0.9679
 
 ---
 
-## Conclusion
-
+# Conclusion
 The project successfully demonstrated the effectiveness of Machine Learning techniques in predicting loan approval decisions.
 
 Feature selection using SelectKBest improved model performance, while the optimized SVM model achieved strong accuracy and an excellent ROC-AUC score.
 
 ---
 
-## Future Improvements
-
-- Apply ensemble models such as Random Forest and XGBoost  
-
-- Handle class imbalance using SMOTE  
-
-- Deploy the model using Flask or Streamlit  
-
-- Add advanced feature engineering techniques to further improve model performance
+# Future Improvements
+- Apply ensemble models such as Random Forest and XGBoost
+- Handle class imbalance using SMOTE
+- Deploy the model using Flask or Streamlit
+- Add advanced feature engineering techniques to further improve performance
