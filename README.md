@@ -146,3 +146,51 @@ Performed using:
     'svm__gamma': 'scale',
     'svm__kernel': 'linear'
 }
+
+---
+
+## Technologies Used
+
+- Python  
+
+- Pandas  
+
+- NumPy  
+
+- Matplotlib  
+
+- Seaborn  
+
+- Scikit-learn  
+
+---
+
+## Final Results
+
+| Metric   | Score   |
+
+|----------|---------|
+
+| Accuracy | 91.67%  |
+
+| ROC-AUC  | 0.9679  |
+
+---
+
+## Conclusion
+
+The project successfully demonstrated the effectiveness of Machine Learning techniques in predicting loan approval decisions.
+
+Feature selection using SelectKBest improved model performance, while the optimized SVM model achieved strong accuracy and an excellent ROC-AUC score.
+
+---
+
+## Future Improvements
+
+- Apply ensemble models such as Random Forest and XGBoost  
+
+- Handle class imbalance using SMOTE  
+
+- Deploy the model using Flask or Streamlit  
+
+- Add advanced feature engineering techniques to further improve model performance
